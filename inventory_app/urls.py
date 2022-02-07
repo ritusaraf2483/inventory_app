@@ -21,5 +21,5 @@ from productapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
-    path('product/',include('productapp.urls'))
+    path('product/',include('productapp.urls', namespace="Product"))
 ]

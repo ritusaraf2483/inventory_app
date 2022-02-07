@@ -5,8 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-{% for p in Products %}
-Name: {{p.name}}<br>
+{% for p in object_list %}
+Name: <a href="{% url 'Product:product_detail' p.id %}">{{p.name}}</a><br>
 Price: {{p.price}}<br>
 Description: {{p.description}}<br>
 Quantity: {{p.quantity}}<br><br>
